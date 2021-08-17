@@ -7,29 +7,33 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
 import {
   SafeAreaView,
  
   useColorScheme,
+  StyleSheet,
  
 } from 'react-native';
 
-import {
-  Colors,
-  
-} from 'react-native/Libraries/NewAppScreen';
-
-import Entype from 'react-native-vector-icons/Entypo';
 
 
-const App: () => Node = () => {
+import HomeScreen from './src/screens/Home';
+import Post from './src/components/Post'
+
+const App: () => React$Node = () => {
 
   return (
-    <SafeAreaView>
-     
+    <SafeAreaView style={styles.container}>
+     {/* <HomeScreen/>  */}
+      <Post/>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container:{
+    
+  }
+})
 
 export default App;
