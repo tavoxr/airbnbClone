@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import type {Node} from 'react';
 import {
   SafeAreaView,
  
@@ -20,17 +21,19 @@ import {
 import HomeScreen from './src/screens/Home';
 import Post from './src/components/Post'
 import feed from './assets/data/feed'
+import SearchResultsScreen from './src/screens/SearchResults';
 
 const post1 = feed[0];
 
-const App: () => React$Node = () => {
+const App: () => Node = () => {
 
   
 
   return (
     <SafeAreaView style={styles.container}>
      {/* <HomeScreen/>  */}
-      <Post post={post1} />
+     {/* <Post post={post1} /> */}
+     <SearchResultsScreen />
       
 
     </SafeAreaView>
