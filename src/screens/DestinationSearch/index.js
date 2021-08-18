@@ -9,7 +9,7 @@ const DestinationSearchScreen = (props)=>{
     const [destination, setDestination] = useState("");
 
     return(
-        <View style={styles.destinationSearchContainer}>
+        <View style={styles.destinationSearchContainer} >
             
             {/* Input Component */}
             <TextInput 

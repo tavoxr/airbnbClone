@@ -1,5 +1,5 @@
 import React, {Children, useState} from 'react';
-import {View} from 'react-native';
+import {Pressable, View, Text,ScrollView} from 'react-native';
 import GuestsCard from '../../components/GuestsCard/index'
 import styles from './styles';
 
@@ -19,34 +19,48 @@ const GuestsScreen = ()=>{
     }   
 
     return(
-    <View>
-        <GuestsCard 
-            typeOfGuest={"Adults"} 
-            minAge={"Ages 12 or above"} 
-            numOfGuests={adults} 
-            setNumOfGuests={setAdults}
-            addGuest={addGuest}
-            deleteGuest={deleteGuest}
-        />
-        <GuestsCard 
-            typeOfGuest={"Children"} 
-            minAge={"Ages 2 - 11"} 
-            numOfGuests={children} 
-            setNumOfGuests={setChildren}
-            addGuest={addGuest}    
-            deleteGuest={deleteGuest}
+    <ScrollView
+        contentContainerStyle={{flexGrow: 1}}
+    >
+    <View style={styles.container}>
+        <View>
+            <GuestsCard 
+                typeOfGuest={"Adults"} 
+                minAge={"Ages 12 or above"} 
+                numOfGuests={adults} 
+                setNumOfGuests={setAdults}
+                addGuest={addGuest}
+                deleteGuest={deleteGuest}
+            />
+            <GuestsCard 
+                typeOfGuest={"Children"} 
+                minAge={"Ages 2 - 11"} 
+                numOfGuests={children} 
+                setNumOfGuests={setChildren}
+                addGuest={addGuest}    
+                deleteGuest={deleteGuest}
 
-        />
-        <GuestsCard 
-            typeOfGuest={"Infants"} 
-            minAge={"Under 2"} 
-            numOfGuests={infants} 
-            setNumOfGuests={setInfants}
-            addGuest={addGuest}    
-            deleteGuest={deleteGuest}            
-        />
+            />
+            <GuestsCard 
+                typeOfGuest={"Infants"} 
+                minAge={"Under 2"} 
+                numOfGuests={infants} 
+                setNumOfGuests={setInfants}
+                addGuest={addGuest}    
+                deleteGuest={deleteGuest}            
+            />
+        </View>
+
+       
+        <Pressable style={styles.searchBtn}
+                
+        >
+            <Text style={styles.searchBtnText}>Search</Text>   
+        </Pressable>
+        
 
     </View>
+    </ScrollView>
     );
 }
 
