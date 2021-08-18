@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
 
-locationSearchContainer:{
+destinationSearchContainer:{
     margin: 20,
 },
 textInput:{

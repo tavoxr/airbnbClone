@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
 
     
-locationRow:{
+destinationRow:{
 
     flexDirection: 'row',
     justifyContent: 'flex-start',

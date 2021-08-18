@@ -14,15 +14,16 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import Router from './src/navigation/Router';
 import HomeScreen from './src/screens/Home';
 
 
 const App: () => Node = () => {
 
   return (
-    <SafeAreaView style={styles.container}>
-      <HomeScreen/> 
-    </SafeAreaView>
+    <>
+      <Router />
+    </>
   );
 };
 
