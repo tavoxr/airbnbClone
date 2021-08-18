@@ -5,7 +5,7 @@ export default [
     },
     {
       id: '1',
-      description: 'Tenerife, Santa Cruz de Tenerife',
+      description: 'Tenerife, Santa Cruz de Tenerife de Santiago de Compostela',
     },
     {
       id: '2',

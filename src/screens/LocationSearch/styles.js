@@ -7,10 +7,13 @@ locationSearchContainer:{
     margin: 20,
 },
 textInput:{
-    backgroundColor:'red',
+    backgroundColor:'#F6F6F6',
     borderRadius: 20,
     fontSize: 20,
-}
+    padding: 12,
+    elevation: 5
+},
+
 
 
 })
