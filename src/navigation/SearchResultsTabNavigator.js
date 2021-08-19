@@ -10,6 +10,9 @@ const SearchResultsTabNavigator = (props)=>{
         <TopTab.Navigator
             screenOptions={{
                 tabBarActiveTintColor: '#f15454',
+                tabBarIndicatorStyle: {
+                    backgroundColor: '#f15454'
+                }
             
             }}
         >
