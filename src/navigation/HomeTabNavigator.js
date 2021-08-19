@@ -1,7 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-import HomeScreen from '../screens/Home/index';
+import HomeScreen from '../screens/Home';
+import ExploreNavigation from './ExploreNavigation';
 import GuestsScreen from '../screens/Guests';
 
 import { color } from 'react-native-reanimated';
@@ -17,7 +17,7 @@ const HomeTabNavigator = (props)=>{
         <Tab.Navigator >
             <Tab.Screen
                 name={"Explore"}
-                component={HomeScreen}
+                component={ExploreNavigation}
                 options={{
                     tabBarIcon:({color})=>(
                         <Fontisto name={"search"} size={25} color={color} />

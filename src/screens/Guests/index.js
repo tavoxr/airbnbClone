@@ -1,5 +1,6 @@
 import React, {Children, useState} from 'react';
 import {Pressable, View, Text,ScrollView} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import GuestsCard from '../../components/GuestsCard/index'
 import styles from './styles';
 
@@ -8,6 +9,8 @@ const GuestsScreen = ()=>{
     const [ adults, setAdults] = useState(0)
     const [ children, setChildren] = useState(0)
     const [ infants, setInfants] = useState(0)
+
+    const navigation = useNavigation();
 
     const addGuest = (guest, setGuest)=>{  
         setGuest(guest +=1)
@@ -53,7 +56,15 @@ const GuestsScreen = ()=>{
 
        
         <Pressable style={styles.searchBtn}
+            onPress={()=> navigation.navigate("Home",{ //navigate to route Home in router
+                screen: "Explore", //then pass through explore screen in HomeTabNavigation
+                params:{
+                    screen: "SearchResults" //pass through the params of the Explore Screen of ExploreNavigation
+                },
                 
+
+            }) }
+            
         >
             <Text style={styles.searchBtnText}>Search</Text>   
         </Pressable>
